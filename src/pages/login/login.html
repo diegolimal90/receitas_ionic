@@ -1,0 +1,24 @@
+<ion-header >
+  <ion-toolbar>
+    <h1 style="text-align: center;">Entrar</h1>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form padding [formGroup]="loginForm" novalidate>
+    <ion-item>
+      <ion-input [(ngModel)]="creds.email" name="email" formControlName="email" type="email" placeholder="E-mail" clearInput
+        clearOnEdit="false">
+      </ion-input>
+      <h6 *ngIf="errorEmail" class="error"> {{messageEmail}}</h6>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="creds.senha" name="senha" formControlName="senha" type="password" placeholder="Password" clearInput
+        clearOnEdit="false">
+      </ion-input>
+      <h6 *ngIf="errorPassword" class="error"> {{messagePassword}}</h6>
+    </ion-item>
+    
+    <button ion-button type="submit" block color="primary" (click)="login()">Entrar</button>
+    <button ion-button block clear color="dark">Não tenho acesso</button>
+  </form>
+</ion-content>

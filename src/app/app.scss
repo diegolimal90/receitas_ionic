@@ -1,0 +1,33 @@
+// http://ionicframework.com/docs/theming/
+
+$colors: (
+  primary: #3e66ab,
+  secondary: #32db64,
+  danger: #dd303e,
+  light: #edeff2,
+  dark: #333333
+);
+
+h1 {
+  color: black;
+  text-shadow: white 0.2em -0.2em 0.3em;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 24px;
+}
+
+h4 {
+  color: black;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+.toolbar-background {
+  // background-image: linear-gradient(to right, #00001a,     #00004d,       #000080);
+}
+ion-content {
+  background-color: #d0d0d0;
+}
+
+$toolbar-ion-title-color: map-get($colors, custom);
+$toolbar-ios-title-text-color: map-get($colors, custom);
+$toolbar-wp-title-text-color: map-get($colors, custom);
